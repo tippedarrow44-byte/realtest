@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Care Bin System</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 5px #2563eb;
+            }
+            50% {
+                box-shadow: 0 0 20px #2563eb, 0 0 30px #2563eb;
+            }
+            100% {
+                box-shadow: 0 0 5px #2563eb;
+            }
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            /* Animated background */
+            background: linear-gradient(270deg, #a7b7c7, #e8edf3, #a7b7c7);
+            background-size: 600% 600%;
+            animation: backgroundShift 20s ease infinite;
+        }
+
+        /* Applying animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .glowing-button {
+            animation: glowing 1.5s infinite;
+        }
+        
+    </style>
+</head>
+<body class="flex flex-col">
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white shadow-lg py-4">
+        <nav class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                Planet Care Bin System
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="flex space-x-4 md:space-x-8">
+                <li>
+                    <a href="Main.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="No.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href=".html" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 glowing-button">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area with Animations -->
+    <main class="flex-grow flex items-center justify-center p-8">
+        <div class="text-center max-w-4xl mx-auto fade-in" id="about-us">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                About Us
+            </h1>
+            <!-- About Us content from the image -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg text-left mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Project Title</h2>
+                <p class="text-lg text-gray-700 mb-6">Planet Care Bin System</p>
+                
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Team Members</h2>
+                <div class="flex flex-col md:flex-row justify-between text-lg text-gray-700 mb-6">
+                    <p><strong>Team Name:</strong> Triple A's</p>
+                    <p><strong>Team Members:</strong> Aira Nur Syifa, Nuradliya Barnayia, Alfonso</p>
+                </div>
+                
+                <hr class="my-6 border-gray-300">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Problem Statement</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            In Brunei, plastic pollution is a major environmental issue, with plastics being the most common waste found on beaches, rivers, and public areas.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Plastic waste is also a big concern because it is unable to decay and breaks into microplastics which harms the fish and corals.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Back in 2018, there was a clean up at Pelumpong Spit & Surrounding Waters. The waste collected from the area includes styrofoam, plastic bags, bottles and plastic packaging. Even in 2020 & 2024, at Pelong Rocks, they manage to collect a lot of plastics, and it is said that the plastics were tangled with marine life or caught in coral reefs.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            *Pelumpong Spit is located at Brunei Muara District, Mukim Serasa.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Objectives</h3>
+                        <p class="text-lg text-gray-700 mb-4">Our aim/goal is to:</p>
+                        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                            <li>Promote sustainable use of materials - materials are reused instead of thrown away.</li>
+                            <li>Reduce litter and improper disposal - keeps public areas clean.</li>
+                            <li>Encourage a lot of people to start recycling plastics and other recyclable materials.</li>
+                            <li>To reduce waste going to landfills and ocean dumping.</li>
+                            <li>To accomplish SDG 12 (Responsible consumption and production), 13 (Climate Action), and SDG 14 (Life below water).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-gray-300">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Solutions</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Since plastic is commonly found on beaches, rivers and public areas, our smart bins encourages people to throw plastics in bins instead of littering. It also reduces the need of large scale cleanups in the future as less plastic will be litter in the environment and stop waste from flowing into rivers and oceans protecting the fish, corals and other marine organisms.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            The bin not only collects and stores plastics for recycling, but it also provides an incentive system where the weight of plastic waste is converted into money or rewards through QR code scanning.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            This creates a behavioral change, as people are more motivated to recycle when there is a tangible benefit.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Features/Functions</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            This bin uses sensor and servo motor to open its automated cover, so that is easy for people to carry their plastics and just dump it in the bin.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            And then the plastic will be weigh inside the bin by using load cell and HX711.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            After it is being weigh, the total "KG" will be shown on a OLED screen, which then the total weight will be converted to currency (e.g. 0.5kg a 0.50 cents).
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            And lastly customer will scan the QR code to receive their money. But they will have to sign up by entering their phone number.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

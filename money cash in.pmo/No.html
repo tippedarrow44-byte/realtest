@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 5px #2563eb;
+            }
+            50% {
+                box-shadow: 0 0 20px #2563eb, 0 0 30px #2563eb;
+            }
+            100% {
+                box-shadow: 0 0 5px #2563eb;
+            }
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            /* Animated background */
+            background: linear-gradient(270deg, #a7b7c7, #e8edf3, #a7b7c7);
+            background-size: 600% 600%;
+            animation: backgroundShift 20s ease infinite;
+        }
+
+        /* Applying animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .glowing-button {
+            animation: glowing 1.5s infinite;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+    </style>
+</head>
+<body class="flex flex-col">
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white shadow-lg py-4">
+        <nav class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                Planet Care Bin System
+            </a>
+            
+            <!-- Navigation Links -->
+            <ul class="flex space-x-4 md:space-x-8">
+                <li>
+                    <a href="Main.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="No.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href=".html" class="px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 glowing-button">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area with Animations -->
+    <main class="flex-grow flex items-center justify-center p-8">
+        <div class="text-center fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                Contact Us
+            </h1>
+            <!-- Container for the cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Contact Card 1 -->
+                <a href="https://wa.me/6737272493" target="_blank" class="card bg-white p-6 rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:shadow-2xl cursor-pointer">
+                    <div class="flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79a15.43 15.43 0 006.59 6.59l2.45-2.45a.997.997 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.45 2.45z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Alfonso</h3>
+                    <p class="text-lg text-gray-600">(+673) 727 2493</p>
+                </a>
+
+                <!-- Contact Card 2 -->
+                <a href="https://wa.me/6737175157" target="_blank" class="card bg-white p-6 rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:shadow-2xl cursor-pointer">
+                    <div class="flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79a15.43 15.43 0 006.59 6.59l2.45-2.45a.997.997 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.45 2.45z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">~Airis</h3>
+                    <p class="text-lg text-gray-600">(+673) 717 5157</p>
+                </a>
+
+                <!-- Contact Card 3 -->
+                <a href="https://wa.me/6738885241" target="_blank" class="card bg-white p-6 rounded-2xl shadow-lg transition-transform duration-300 ease-in-out hover:shadow-2xl cursor-pointer">
+                    <div class="flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.62 10.79a15.43 15.43 0 006.59 6.59l2.45-2.45a.997.997 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 015 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.45 2.45z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">~ley🐈‍⬛</h3>
+                    <p class="text-lg text-gray-600">(+673) 888 5241</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
